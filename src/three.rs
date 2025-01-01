@@ -56,7 +56,7 @@ impl<'a, T> Iterator for Iter<'a, T> {
     }
 }
 
-impl<T> Drop for List<T>{
+impl<T> Drop for List<T> {
     fn drop(&mut self) {
         let mut head = self.head.take();
         while let Some(node) = head {
